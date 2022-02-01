@@ -5,7 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
+  [
   <h1>Hello world</h1>,
+  <p>Life is beautiful</p>
+  ],
   document.querySelector("#root")
 )
 
