@@ -3,16 +3,30 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+const name = "Md Alamin hossain"
+var currentDate = new Date()
 ReactDOM.render(
   [
-  <h1>Hello world</h1>,
-  <p>Life is beautiful</p>
+  <h1>Top five favourite movies I watched</h1>,
+  <p>Here is the list:</p>,
+  <ol>
+    <li>Life is beautifu</li>
+    <li>Itihash</li>
+    <li>Zindegi na Milegegi Doobara</li>
+    <li>Ammajan</li>
+    <li>Hazar bochor Dhore</li>
+  </ol>,
+  <h1>{`My name is ${name}`}</h1>,
+  <p>{`Current date ${currentDate.toLocaleDateString()}`}</p>,
+  <p>{`Current time ${currentDate.toLocaleTimeString()}`}</p>
   ],
   document.querySelector("#root")
 )
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// ReactDom.render(
+//   <>
+//     <p>This is nice using react</p>
+//     <h1>Good Night</h1>
+//   </>,
+//   document.getElementById('para')
+// )
 reportWebVitals();
