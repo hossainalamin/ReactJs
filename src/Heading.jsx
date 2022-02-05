@@ -1,5 +1,5 @@
 import React from "react";
 function Heading(){
-    return <h1>My name is alamin</h1>;
+    return <span style={{color : 'rosybrown'}}>Hello sir</span>;
 }
 export default Heading;

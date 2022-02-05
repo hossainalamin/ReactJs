@@ -1,12 +1,10 @@
 import React from "react";
 import Heading from "./Heading";
-import List from "./List";
+import Greeting from "./Greeting";
 function App(){
     return (
         <>
-        <Heading/>
-        <List />
-        <List />
+        <h1><Heading/>,<Greeting/></h1>
         </>
     );
 }
