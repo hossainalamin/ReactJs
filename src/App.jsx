@@ -16,6 +16,12 @@ function App() {
     const showTime = ()=>{
         timeFunction(new Date().toLocaleTimeString())
     }
+    const[timeUpdate,updateCTime] = useState(time)
+    const updateTime = ()=>{
+        const localTime = new Date().toLocaleTimeString();
+        updateCTime(localTime)
+    }
+    setInterval(updateTime,1000);
     return (
         <>
             <h1><Heading />,<Greeting /></h1>
@@ -63,6 +69,7 @@ function App() {
             <button style={{marginLeft : '500px'}} className = 'btn btn-danger mb-5' onClick={numInc}>Click Me</button>
             <h2 style = {{backgroundColor : "red",marginTop : '20px',justifyContent : 'center',display : 'flex'}}>{loadTime}</h2>
             <button style={{marginLeft : '500px'}} className = 'btn btn-danger mb-5' onClick={showTime}>Show time</button>
+            <h2 style = {{backgroundColor : "red",marginTop : '20px',justifyContent : 'center',display : 'flex'}}>{timeUpdate}</h2>
         </>
     );
 }
