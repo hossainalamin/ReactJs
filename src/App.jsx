@@ -6,10 +6,15 @@ import Card from './Card';
 import Cdata from './Cdata'
 import Slot from './Slot'
 function App() {
-    const state = useState();
-    const [count,setState] = useState(1);
+    const [count,setState] = useState(0);
     const numInc = ()=>{
-        setState(count +1)
+        setState(count +1);   
+    }
+    var time = new Date();
+    time = time.toLocaleTimeString()
+    const[loadTime,timeFunction] = useState(time)
+    const showTime = ()=>{
+        timeFunction(new Date().toLocaleTimeString())
     }
     return (
         <>
@@ -56,6 +61,8 @@ function App() {
                 z="❤️" />
             <h2 style = {{backgroundColor : 'aliceblue',marginTop : '20px',justifyContent : 'center',display : 'flex'}}>{count}</h2>
             <button style={{marginLeft : '500px'}} className = 'btn btn-danger mb-5' onClick={numInc}>Click Me</button>
+            <h2 style = {{backgroundColor : "red",marginTop : '20px',justifyContent : 'center',display : 'flex'}}>{loadTime}</h2>
+            <button style={{marginLeft : '500px'}} className = 'btn btn-danger mb-5' onClick={showTime}>Show time</button>
         </>
     );
 }
