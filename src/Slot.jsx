@@ -7,7 +7,7 @@ const Slot = (probs)=>{
             <div className="card">
                 <span style={{justifyContent : 'center',display : 'flex'}}>{x}{y}{z}</span>
                 <hr/>
-                <p style={{textAlign : 'center'}}>Mathing</p>
+                <p style={{textAlign : 'center'}}>Matching</p>
             </div>
         </>
     )
@@ -17,7 +17,7 @@ const Slot = (probs)=>{
                 <div className="card">
                     <span style={{justifyContent : 'center',display : 'flex'}}>{x}{y}{z}</span>
                     <hr/>
-                    <p style={{textAlign : 'center'}}>Not Mathing</p>
+                    <p style={{textAlign : 'center'}}>Not Matching</p>
                 </div>
             </>
         )

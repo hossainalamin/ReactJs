@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Heading from "./Heading";
 import Greeting from "./Greeting";
 import { Add, Sub, Mul, Div } from './Calculation';
@@ -6,6 +6,11 @@ import Card from './Card';
 import Cdata from './Cdata'
 import Slot from './Slot'
 function App() {
+    const state = useState();
+    const [count,setState] = useState(1);
+    const numInc = ()=>{
+        setState(count +1)
+    }
     return (
         <>
             <h1><Heading />,<Greeting /></h1>
@@ -49,8 +54,8 @@ function App() {
                 x="❤️"
                 y="❤️"
                 z="❤️" />
-
-
+            <h2 style = {{backgroundColor : 'aliceblue',marginTop : '20px',justifyContent : 'center',display : 'flex'}}>{count}</h2>
+            <button style={{marginLeft : '500px'}} className = 'btn btn-danger mb-5' onClick={numInc}>Click Me</button>
         </>
     );
 }
