@@ -22,6 +22,14 @@ function App() {
         updateCTime(localTime)
     }
     setInterval(updateTime,1000);
+    const color = 'red'
+    const [bg,update] = useState(color)
+    const [name,updateClick] = useState('click me')
+    const updateBg = ()=>{
+        let updateColor = "yellow";
+        update(updateColor);
+        updateClick('Clicked')
+    }
     return (
         <>
             <h1><Heading />,<Greeting /></h1>
@@ -70,6 +78,10 @@ function App() {
             <h2 style = {{backgroundColor : "red",marginTop : '20px',justifyContent : 'center',display : 'flex'}}>{loadTime}</h2>
             <button style={{marginLeft : '500px'}} className = 'btn btn-danger mb-5' onClick={showTime}>Show time</button>
             <h2 style = {{backgroundColor : "red",marginTop : '20px',justifyContent : 'center',display : 'flex'}}>{timeUpdate}</h2>
+            <hr/>
+            <div style={{backgroundColor : bg,height : '300px'}}>
+            <button style={{marginLeft: '500px',marginTop : '200px'}} className="btn btn-primary" onClick={updateBg}>{name}</button>
+            </div>
         </>
     );
 }
