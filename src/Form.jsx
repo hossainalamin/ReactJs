@@ -5,28 +5,32 @@ const Form = ()=>{
         lname : ' '
     });
     const formData = (event)=>{
-       const value =  event.target.value
-       const name =  event.target.name
-       setFormname((preVlaue)=>{
-        if(name === 'fname' ){
-            return{
-            fname : value,
-            lname : preVlaue.lname
-            }
-        }else if(name === 'lname' ){
-            return{
-            fname : preVlaue.fname,
-            lname : value
-            }
-        }
+       const {name,value} =  event.target
+       setFormname((preValue)=>{
+           return{
+           ...preValue,
+           [name]: value,
+           }
+        // if(name === 'fname' ){
+        //     return{
+        //     fname : value,
+        //     lname : preVlaue.lname
+        //     }
+        // }else if(name === 'lname' ){
+        //     return{
+        //     fname : preVlaue.fname,
+        //     lname : value
+        //     }
+        // }
     });
 }
-    // const submitData = ()=>{
-        
-    // }
+    const submitData = (event)=>{
+        event.preventDefault()
+        alert('Are you sure to submit')
+    }
     return (
         <>
-        <form action="">
+        <form action="" onSubmit={submitData}>
         <div style={{height : '330px'}}>
             <h2 >Hello {fullname.fname} {fullname.lname}</h2>
             <input type="text" placeholder = "Enter first name" style={{width:'300px'}} name = "fname" onChange={formData}/><br/><br/>
