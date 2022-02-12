@@ -11,17 +11,6 @@ const Form = ()=>{
            ...preValue,
            [name]: value,
            }
-        // if(name === 'fname' ){
-        //     return{
-        //     fname : value,
-        //     lname : preVlaue.lname
-        //     }
-        // }else if(name === 'lname' ){
-        //     return{
-        //     fname : preVlaue.fname,
-        //     lname : value
-        //     }
-        // }
     });
 }
     const submitData = (event)=>{
